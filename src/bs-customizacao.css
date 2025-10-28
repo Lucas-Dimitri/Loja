@@ -1,19 +1,21 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
 :root {
-  --bs-primary: #6f42c1;
-  --bs-primary-rgb: 111, 66, 193;
+  --bs-primary: #6f42c1 !important;
+  --bs-primary-rgb: 111, 66, 193 !important;
 
-  --bs-warning: #fd7e14;
-  --bs-warning-rgb: 253, 126, 20;
+  --bs-warning: #fd7e14 !important;
+  --bs-warning-rgb: 253, 126, 20 !important;
 
-  --bs-body-bg: #f0f0f0;
-  --bs-body-bg-rgb: 240, 240, 240;
+  --bs-body-bg: #f0f0f0 !important;
+  --bs-body-bg-rgb: 240, 240, 240 !important;
 }
 
 .btn-outline-primary {
-  --bs-btn-color: #6f42c1;
-  --bs-btn-border-color: #6f42c1;
-  --bs-btn-hover-bg: #6f42c1;
-  --bs-btn-hover-border-color: #6f42c1;
-  --bs-btn-active-bg: #6f42c1;
-  --bs-btn-active-border-color: #6f42c1;
+  --bs-btn-color: #6f42c1 !important;
+  --bs-btn-border-color: #6f42c1 !important;
+  --bs-btn-hover-bg: #6f42c1 !important;
+  --bs-btn-hover-border-color: #6f42c1 !important;
+  --bs-btn-active-bg: #6f42c1 !important;
+  --bs-btn-active-border-color: #6f42c1 !important;
 }
