@@ -16,13 +16,12 @@ function DetalhesCompra({ compras }) {
   }
 
   return (
-    <div>
-      {/* Header */}
-      <div className="bg-primary text-white text-center py-3">
+    <body>
+      <header className="bg-primary text-white text-center py-3">
         <h1>Detalhes da Compra</h1>
-      </div>
+      </header>
 
-      <div className="container my-4">
+      <main className="container my-4">
         <Link to="/admin" className="text-decoration-none">
           ↩ Voltar para Administração
         </Link>
@@ -102,13 +101,12 @@ function DetalhesCompra({ compras }) {
             </div>
           </div>
         </div>
-      </div>
+      </main>
 
-      {/* Footer */}
       <footer className="bg-primary text-white text-center py-3 mt-5">
         <p className="mb-0">Direitos Autorais. 2025.</p>
       </footer>
-    </div>
+    </body>
   );
 }
 

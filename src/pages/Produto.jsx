@@ -21,13 +21,12 @@ function Produto({ produtos, adicionarAoCarrinho, carrinhoCount }) {
   };
 
   return (
-    <div>
-      {/* Header */}
-      <div className="bg-primary text-white text-center py-3">
+    <body>
+      <header className="bg-primary text-white text-center py-3">
         <h1>Minha Loja</h1>
-      </div>
+      </header>
 
-      {/* Barra do Carrinho */}
+      {/* barra do carrinho */}
       <div className="bg-light py-3">
         <div className="container">
           <Link to="/carrinho" className="text-decoration-none">
@@ -36,7 +35,7 @@ function Produto({ produtos, adicionarAoCarrinho, carrinhoCount }) {
         </div>
       </div>
 
-      <div className="container my-4">
+      <main className="container my-4">
         <Link to="/" className="text-decoration-none">
           ↩ Voltar
         </Link>
@@ -79,13 +78,12 @@ function Produto({ produtos, adicionarAoCarrinho, carrinhoCount }) {
             </button>
           </div>
         </div>
-      </div>
+      </main>
 
-      {/* Footer */}
       <footer className="bg-primary text-white text-center py-3 mt-5">
         <p className="mb-0">Direitos Autorais. 2025.</p>
       </footer>
-    </div>
+    </body>
   );
 }
 

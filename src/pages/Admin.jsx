@@ -30,18 +30,17 @@ function Admin({ produtos, compras, adicionarProduto }) {
   };
 
   return (
-    <div>
-      {/* Header */}
-      <div className="bg-primary text-white text-center py-3">
+    <body>
+      <header className="bg-primary text-white text-center py-3">
         <h1>Administração - Minha Loja</h1>
-      </div>
+      </header>
 
-      <div className="container my-4">
+      <main className="container my-4">
         <Link to="/" className="text-decoration-none">
           ↩ Voltar para Loja
         </Link>
 
-        {/* Lista de Produtos */}
+        {/* lista com produtos existentes */}
         <div className="mt-4">
           <div className="d-flex justify-content-between align-items-center mb-3">
             <h2>Produtos Disponíveis ({produtos.length})</h2>
@@ -53,7 +52,7 @@ function Admin({ produtos, compras, adicionarProduto }) {
             </button>
           </div>
 
-          {/* Formulário de Adicionar Produto */}
+          {/* form para adicioanr produto */}
           {mostrarForm && (
             <div className="card mb-4">
               <div className="card-body">
@@ -142,13 +141,13 @@ function Admin({ produtos, compras, adicionarProduto }) {
           </div>
         </div>
 
-        {/* Lista de Compras */}
+        {/* lista de compras */}
         <div className="mt-5">
           <div className="d-flex justify-content-between align-items-center mb-3">
             <h2>Compras Realizadas ({comprasFiltradas.length})</h2>
           </div>
 
-          {/* Filtro de Produtos */}
+          {/* filtro para produtos presentes nas compras */}
           <div className="mb-4">
             <div className="input-group">
               <span className="input-group-text">🔍</span>
@@ -214,13 +213,12 @@ function Admin({ produtos, compras, adicionarProduto }) {
             </div>
           )}
         </div>
-      </div>
+      </main>
 
-      {/* Footer */}
       <footer className="bg-primary text-white text-center py-3 mt-5">
         <p className="mb-0">Direitos Autorais. 2025.</p>
       </footer>
-    </div>
+    </body>
   );
 }
 

@@ -14,13 +14,12 @@ function Home({ produtos, adicionarAoCarrinho, carrinhoCount }) {
   };
 
   return (
-    <div>
-      {/* Header */}
-      <div className="bg-primary text-white text-center py-3">
+    <body>
+      <header className="bg-primary text-white text-center py-3">
         <h1>Minha Loja</h1>
-      </div>
+      </header>
 
-      {/* Barra do Carrinho */}
+      {/* barra do carrinho e botao admin */}
       <div className="bg-light py-3">
         <div className="container">
           <div className="d-flex justify-content-between align-items-center">
@@ -36,8 +35,7 @@ function Home({ produtos, adicionarAoCarrinho, carrinhoCount }) {
         </div>
       </div>
 
-      <div className="container my-4">
-        {/* Lista de Produtos */}
+      <main className="container my-4">
         <div>
           <h2>Lista de Produtos</h2>
           <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
@@ -77,13 +75,12 @@ function Home({ produtos, adicionarAoCarrinho, carrinhoCount }) {
             ))}
           </div>
         </div>
-      </div>
+      </main>
 
-      {/* Footer */}
       <footer className="bg-primary text-white text-center py-3 mt-5">
         <p className="mb-0">Direitos Autorais. 2025.</p>
       </footer>
-    </div>
+    </body>
   );
 }
 
