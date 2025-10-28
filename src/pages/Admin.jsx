@@ -36,6 +36,8 @@ function Admin({ produtos, compras, adicionarProduto }) {
       </header>
 
       <main className="container my-4">
+
+        {/* botao para voltar */}
         <Link to="/" className="text-decoration-none">
           ↩ Voltar para Loja
         </Link>
@@ -117,6 +119,7 @@ function Admin({ produtos, compras, adicionarProduto }) {
             </div>
           )}
 
+          {/* tabela com os produtos existentes */}
           <div className="table-responsive">
             <table className="table table-striped table-hover">
               <thead className="table-dark">
@@ -173,7 +176,8 @@ function Admin({ produtos, compras, adicionarProduto }) {
               </small>
             )}
           </div>
-
+          
+          { /* lista com compras realizadas e com filtros aplicados, se forem feitos */}
           {comprasFiltradas.length === 0 ? (
             <div className="alert alert-info">
               {filtro

@@ -33,6 +33,7 @@ function Carrinho({
         <h1>Minha Loja</h1>
       </header>
 
+      {/* botao do carrinho */}
       <div className="bg-light py-3">
         <div className="container">
           <h2 className="text-primary">🛒 Carrinho ({carrinhoCount})</h2>
