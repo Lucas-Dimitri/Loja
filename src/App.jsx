@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./bs-customizacao.css";
 import Home from "./pages/Home";
 import Produto from "./pages/Produto";
 import Carrinho from "./pages/Carrinho";
