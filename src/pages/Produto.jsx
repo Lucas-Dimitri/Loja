@@ -43,7 +43,7 @@ function Produto({ produtos, adicionarAoCarrinho, carrinhoCount }) {
         <div className="row mt-4">
           <div className="col-md-6 mb-4 mb-md-0">
             <img
-              src={`/images/${produto.nome}.jpg`}
+              src={`${import.meta.env.BASE_URL}${produto.nome}.jpg`}
               alt={produto.nome}
               className="img-fluid w-100 rounded"
             />

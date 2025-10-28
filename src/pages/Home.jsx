@@ -43,7 +43,7 @@ function Home({ produtos, adicionarAoCarrinho, carrinhoCount }) {
               <div key={produto.id} className="col">
                 <div className="card h-100">
                   <img
-                    src={`/images/${produto.nome}.jpg`}
+                    src={`${import.meta.env.BASE_URL}${produto.nome}.jpg`}
                     alt={produto.nome}
                     className="card-img-top"
                   />
