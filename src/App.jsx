@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./bs-customizacao.css";
 import Home from "./pages/Home";
 import Produto from "./pages/Produto";
