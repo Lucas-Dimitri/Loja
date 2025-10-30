@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 
 function Admin({ produtos, compras, adicionarProduto }) {
   const [filtro, setFiltro] = useState("");
@@ -9,13 +9,15 @@ function Admin({ produtos, compras, adicionarProduto }) {
     preco: "",
   });
 
-  const comprasFiltradas = filtro
-    ? compras.filter((compra) =>
-        compra.itens.some((item) =>
-          item.produto.nome.toLowerCase().includes(filtro.toLowerCase())
-        )
+  const comprasFiltradas = useMemo(() => {
+    if (!filtro) return compras;
+
+    return compras.filter((compra) =>
+      compra.itens.some((item) =>
+        item.produto.nome.toLowerCase().includes(filtro.toLowerCase())
       )
-    : compras;
+    );
+  }, [filtro, compras]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,7 +38,6 @@ function Admin({ produtos, compras, adicionarProduto }) {
       </header>
 
       <main className="container my-4">
-
         {/* botao para voltar */}
         <Link to="/" className="text-decoration-none">
           ↩ Voltar para Loja
@@ -176,8 +177,8 @@ function Admin({ produtos, compras, adicionarProduto }) {
               </small>
             )}
           </div>
-          
-          { /* lista com compras realizadas e com filtros aplicados, se forem feitos */}
+
+          {/* lista com compras realizadas e com filtros aplicados, se forem feitosz */}
           {comprasFiltradas.length === 0 ? (
             <div className="alert alert-info">
               {filtro
