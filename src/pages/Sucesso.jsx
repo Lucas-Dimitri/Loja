@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Sucesso() {
   return (
-    <body>
+    <div>
       <header className="bg-primary text-white text-center py-3">
         <h1>Minha Loja</h1>
       </header>
@@ -30,7 +30,7 @@ function Sucesso() {
       <footer className="bg-primary text-white text-center py-3 mt-5 fixed-bottom">
         <p className="mb-0">Direitos Autorais. 2025.</p>
       </footer>
-    </body>
+    </div>
   );
 }
 

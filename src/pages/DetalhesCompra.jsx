@@ -16,7 +16,7 @@ function DetalhesCompra({ compras }) {
   }
 
   return (
-    <body>
+    <div>
       <header className="bg-primary text-white text-center py-3">
         <h1>Detalhes da Compra</h1>
       </header>
@@ -106,7 +106,7 @@ function DetalhesCompra({ compras }) {
       <footer className="bg-primary text-white text-center py-3 mt-5">
         <p className="mb-0">Direitos Autorais. 2025.</p>
       </footer>
-    </body>
+    </div>
   );
 }
 

@@ -8,20 +8,8 @@ function Produto({ produtos, adicionarAoCarrinho, carrinhoCount }) {
     return <div>Produto não encontrado</div>;
   }
 
-  const renderStars = (avaliacoes) => {
-    const stars = [];
-    for (let i = 1; i <= 5; i++) {
-      if (i <= Math.min(5, Math.floor(avaliacoes / 20))) {
-        stars.push(<span key={i}>★</span>);
-      } else {
-        stars.push(<span key={i}>☆</span>);
-      }
-    }
-    return stars;
-  };
-
   return (
-    <body>
+    <div>
       <header className="bg-primary text-white text-center py-3">
         <h1>Minha Loja</h1>
       </header>
@@ -51,8 +39,8 @@ function Produto({ produtos, adicionarAoCarrinho, carrinhoCount }) {
           <div className="col-md-6">
             <h2>{produto.nome}</h2>
             <div className="text-warning fs-5 mb-3">
-              {renderStars(produto.avaliacoes)}{" "}
-              <span className="text-muted">{produto.avaliacoes}</span>
+              ★★★★★
+              <span className="text-muted m-2">{produto.avaliacoes}</span>
             </div>
             <div className="border rounded p-3 mb-3">
               <h5>Descrição:</h5>
@@ -83,7 +71,7 @@ function Produto({ produtos, adicionarAoCarrinho, carrinhoCount }) {
       <footer className="bg-primary text-white text-center py-3 mt-5">
         <p className="mb-0">Direitos Autorais. 2025.</p>
       </footer>
-    </body>
+    </div>
   );
 }
 

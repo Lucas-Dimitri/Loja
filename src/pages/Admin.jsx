@@ -9,15 +9,13 @@ function Admin({ produtos, compras, adicionarProduto }) {
     preco: "",
   });
 
-  const comprasFiltradas = useMemo(() => {
-    if (!filtro) return compras;
-
-    return compras.filter((compra) =>
-      compra.itens.some((item) =>
-        item.produto.nome.toLowerCase().includes(filtro.toLowerCase())
-      )
-    );
-  }, [filtro, compras]);
+  const comprasFiltradas = !filtro
+    ? compras
+    : compras.filter((compra) =>
+        compra.itens.some((item) =>
+          item.produto.nome.toLowerCase().includes(filtro.toLowerCase())
+        )
+      );
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,7 +30,7 @@ function Admin({ produtos, compras, adicionarProduto }) {
   };
 
   return (
-    <body>
+    <div>
       <header className="bg-primary text-white text-center py-3">
         <h1>Administração - Minha Loja</h1>
       </header>
@@ -223,7 +221,7 @@ function Admin({ produtos, compras, adicionarProduto }) {
       <footer className="bg-primary text-white text-center py-3 mt-5">
         <p className="mb-0">Direitos Autorais. 2025.</p>
       </footer>
-    </body>
+    </div>
   );
 }
 

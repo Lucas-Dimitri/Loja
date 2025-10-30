@@ -1,20 +1,8 @@
 import { Link } from "react-router-dom";
 
 function Home({ produtos, adicionarAoCarrinho, carrinhoCount }) {
-  const renderStars = (avaliacoes) => {
-    const stars = [];
-    for (let i = 1; i <= 5; i++) {
-      if (i <= Math.min(5, Math.floor(avaliacoes / 20))) {
-        stars.push(<span key={i}>★</span>);
-      } else {
-        stars.push(<span key={i}>☆</span>);
-      }
-    }
-    return stars;
-  };
-
   return (
-    <body>
+    <div>
       <header className="bg-primary text-white text-center py-3">
         <h1>Minha Loja</h1>
       </header>
@@ -56,10 +44,7 @@ function Home({ produtos, adicionarAoCarrinho, carrinhoCount }) {
                         {produto.nome}
                       </Link>
                     </h5>
-                    <div className="text-warning">
-                      {renderStars(produto.avaliacoes)}{" "}
-                      <span className="text-muted">{produto.avaliacoes}</span>
-                    </div>
+                    <div className="text-warning">★★★★★</div>
                     <p className="card-text fw-bold">
                       R$ {produto.preco.toFixed(2)}
                     </p>
@@ -80,7 +65,7 @@ function Home({ produtos, adicionarAoCarrinho, carrinhoCount }) {
       <footer className="bg-primary text-white text-center py-3 mt-5">
         <p className="mb-0">Direitos Autorais. 2025.</p>
       </footer>
-    </body>
+    </div>
   );
 }
 
